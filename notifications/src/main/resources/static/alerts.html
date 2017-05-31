@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications and alerts example</title>
+    <script type="text/javascript" src="/file?name=common.js"></script>
+</head>
+        
+        <p>
+            <button id="subscribe-notification-events">Subscribe</button><br />
+            Update Notification count: <ul id="notification-events"></ul>
+        </p>
+
+    <p>
+        Return <a href="/">to the index</a>
+    </p>
+
+    <script type="application/javascript">
+
+        addEvent("click", document.getElementById('subscribe-notification-events'), function() {
+            var personEvents = document.getElementById("notification-events");
+			 var personEventSource = new EventSource("/events/A99955560");
+               personEventSource.onmessage = function(e) {
+              var newElement = document.createElement("li");
+              var notification = JSON.parse(e.data);
+              newElement.innerHTML = "Notifications : notificationId =" + notification.notificationId + ", notifCount =" + notification.notifCount ;
+              if(personEvents != null){
+            	  personEvents.innerHTML = '';
+              }
+              personEvents.appendChild(newElement);
+            }
+        });
+
+    </script>
+</body>
+</html>
