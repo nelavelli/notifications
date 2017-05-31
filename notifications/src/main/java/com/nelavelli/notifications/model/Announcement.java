@@ -2,6 +2,11 @@ package com.nelavelli.notifications.model;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * @author Nelavelli Naresh
+ *
+ */
 public class Announcement implements Serializable {
 
 	private static final long serialVersionUID = -1403182613127173094L;

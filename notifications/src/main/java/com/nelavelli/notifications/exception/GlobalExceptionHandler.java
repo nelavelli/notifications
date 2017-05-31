@@ -5,6 +5,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.nelavelli.notifications.model.Announcement;
 
+/**
+ * 
+ * @author Nelavelli Naresh
+ *
+ */
 @RestControllerAdvice(basePackages = {"com.nelavelli.notifications"})
 public class GlobalExceptionHandler {
 	@ExceptionHandler(Exception.class)

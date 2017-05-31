@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nelavelli.notifications.model.Announcement;
 
-
+/**
+ * 
+ * @author Nelavelli Naresh
+ *
+ */
 @RestController
 @RequestMapping("/announcement")
 public class AnnouncementController {

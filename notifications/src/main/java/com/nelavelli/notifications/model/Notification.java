@@ -4,6 +4,12 @@ import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
+/**
+ * 
+ * @author Nelavelli Naresh
+ *
+ */
 public class Notification implements Serializable {
 
 	private static final long serialVersionUID = 8225174215807091027L;

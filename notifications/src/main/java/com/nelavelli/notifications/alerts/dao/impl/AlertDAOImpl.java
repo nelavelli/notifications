@@ -5,6 +5,11 @@ import java.util.Date;
 import com.nelavelli.notifications.alerts.dao.AlertDAO;
 import com.nelavelli.notifications.model.Alert;
 
+/**
+ * 
+ * @author Nelavelli Naresh
+ *
+ */
 public class AlertDAOImpl implements AlertDAO {
 
 	@Override

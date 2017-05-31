@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.reactive.config.EnableWebFlux;
 import org.springframework.web.reactive.config.WebFluxConfigurer;
 
+/**
+ * 
+ * @author Nelavelli Naresh
+ *
+ */
 @SpringBootApplication
 @EnableWebFlux
 public class NotificationsApplication implements WebFluxConfigurer {

@@ -16,6 +16,11 @@ import com.nelavelli.notifications.notification.service.NotificationService;
 
 import reactor.core.publisher.Flux;
 
+/**
+ * 
+ * @author Nelavelli Naresh
+ *
+ */
 @RestController
 public class AlertsController {
 

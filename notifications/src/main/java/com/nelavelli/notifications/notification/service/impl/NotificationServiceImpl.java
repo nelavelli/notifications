@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 import com.nelavelli.notifications.notification.dao.NotificationDAO;
 import com.nelavelli.notifications.notification.service.NotificationService;
 
+/**
+ * 
+ * @author Nelavelli Naresh
+ *
+ */
 @Service
 public class NotificationServiceImpl implements NotificationService{
 	

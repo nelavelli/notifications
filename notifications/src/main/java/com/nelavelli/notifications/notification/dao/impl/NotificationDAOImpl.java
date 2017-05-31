@@ -4,6 +4,11 @@ import org.springframework.stereotype.Repository;
 
 import com.nelavelli.notifications.notification.dao.NotificationDAO;
 
+/**
+ * 
+ * @author Nelavelli Naresh
+ *
+ */
 @Repository
 public class NotificationDAOImpl implements NotificationDAO {
 
