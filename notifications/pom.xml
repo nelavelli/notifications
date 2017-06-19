@@ -10,7 +10,6 @@
 
 	<name>notifications</name>
 	<description>project for Notifications Alerts and Announcements</description>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -43,6 +42,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.projectreactor.addons/reactor-test -->
+		<dependency>
+			<groupId>io.projectreactor.addons</groupId>
+			<artifactId>reactor-test</artifactId>
+			<version>3.0.7.RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>3.1.0</version>
+			<type>maven-plugin</type>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-websocket</artifactId>
@@ -71,6 +83,7 @@
 			<artifactId>jquery</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -106,10 +119,11 @@
 			<groupId>io.reactivex</groupId>
 			<artifactId>rxjava-reactive-streams</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>io.projectreactor.addons</groupId>
 			<artifactId>reactor-test</artifactId>
+			<version>3.0.7.RELEASE</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -127,6 +141,7 @@
 					<addResources>true</addResources>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -155,9 +170,23 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+			<id>central</id>
+			<url>https://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
 	</repositories>
 
 	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>https://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
 		<pluginRepository>
 			<id>spring-snapshots</id>
 			<name>Spring Snapshots</name>
