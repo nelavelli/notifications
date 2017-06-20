@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Notifications and alerts example</title>
-    <script type="text/javascript" src="/notifications/file?name=common.js"></script>
+    <script type="text/javascript" src="/notifications/static/common.js"></script>
 </head>
         
         <p>
@@ -19,7 +19,7 @@
 
         addEvent("click", document.getElementById('subscribe-notification-events'), function() {
             var personEvents = document.getElementById("notification-events");
-			 var personEventSource = new EventSource("/notifications/events/A99955560");
+			 var personEventSource = new EventSource("/notifications/events/A80980823");
                personEventSource.onmessage = function(e) {
               var newElement = document.createElement("li");
               var notification = JSON.parse(e.data);

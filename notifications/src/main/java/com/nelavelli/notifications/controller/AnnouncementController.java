@@ -13,7 +13,7 @@ import com.nelavelli.notifications.model.Announcement;
  *
  */
 @RestController
-@RequestMapping("/announcement")
+@RequestMapping("/notifications/announcement")
 public class AnnouncementController {
 
 	@MessageMapping("/it")

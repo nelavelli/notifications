@@ -27,7 +27,7 @@ public class AlertsController {
 	@Autowired
 	NotificationService notificationService;
 
-	@GetMapping(path = "/", produces = MediaType.TEXT_HTML_VALUE)
+	@GetMapping(path = "/notifications", produces = MediaType.TEXT_HTML_VALUE)
 	Resource index() {
 		return new ClassPathResource("static/index.html");
 	}
@@ -37,7 +37,7 @@ public class AlertsController {
 		return new ClassPathResource("static/" + name);
 	}
 
-	@GetMapping("/events/{lanId}")
+	@GetMapping(path="/events/{lanId}", produces = MediaType.ALL_VALUE)
 	Flux<Notification> notifyEvents(@PathVariable String lanId) {
 		try {
 			System.out.println("person Object is triggred....     " + lanId);

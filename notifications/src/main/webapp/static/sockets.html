@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello WebSocket</title>
+
+<link href="/notifications/static/bootstrap.min.css" rel="stylesheet">
+<link href="/notifications/static/main.css" rel="stylesheet">
+<script src="/notifications/static/jquery.min.js"></script>
+<script src="/notifications/static/sockjs.min.js"></script>
+<script src="/notifications/static/stomp.min.js"></script>
+<script src="/notifications/static/app.js"></script>
+</head>
+<body>
+	<noscript>
+		<h2 style="color: #ff0000">Seems your browser doesn't support
+			Javascript! Websocket relies on Javascript being enabled. Please
+			enable Javascript and reload this page!</h2>
+	</noscript>
+
+	<div id="main-content" class="container">
+
+		<div id="department-content" class="container">
+			<div class="row  col-md-12 form-inline form-group">
+				<label>Please select the Department that you want to
+					subscribe to</label> <select name="selDepart" id="selDepart">
+					<option value="it">IT</option>
+					<option value="sales">Sales</option>
+					<option value="hr">Hr</option>
+					<option value="admin">Admin</option>
+					<option value="all">All</option>
+					<option value="publisher">Publisher</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row" id="publisher">
+			<div class="col-md-6">
+				<form class="form-inline">
+					<div class="form-group">
+						<label for="connect">WebSocket connection:</label>
+						<button id="connect" class="btn btn-default" type="submit">Connect</button>
+						<button id="disconnect" class="btn btn-default" type="submit"
+							disabled="disabled">Disconnect</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<form class="form-inline">
+					<div class="form-group">
+						<label for="name">What is your name?</label> <input type="text"
+							id="name" class="form-control" placeholder="Your name here...">
+						<label for="role">Department</label> <select name="department"
+							id="department">
+							<option value="it">IT</option>
+							<option value="sales">Sales</option>
+							<option value="hr">Hr</option>
+							<option value="admin">Admin</option>
+							<option value="all">All</option>
+						</select>
+					</div>
+					<button id="send" class="btn btn-default" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
+		<div class="row" id="subscriber">
+			<div class="col-md-12">
+				<table id="conversation" class="table table-striped">
+					<thead>
+						<tr>
+							<th>Greetings</th>
+						</tr>
+					</thead>
+					<tbody id="greetings">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

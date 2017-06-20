@@ -6,7 +6,7 @@
 	<groupId>com.nelavelli.notifications</groupId>
 	<artifactId>notifications</artifactId>
 	<version>1.0.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>notifications</name>
 	<description>project for Notifications Alerts and Announcements</description>
