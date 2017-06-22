@@ -5,7 +5,6 @@
 
 	<groupId>com.nelavelli.notifications</groupId>
 	<artifactId>notifications</artifactId>
-	<version>1.0.0</version>
 	<packaging>war</packaging>
 
 	<name>notifications</name>
@@ -32,6 +31,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-messaging -->
 		<dependency>
@@ -41,6 +46,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.projectreactor.addons/reactor-test -->
 		<dependency>
@@ -204,4 +215,5 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+	<version>1.0.0</version>
 </project>

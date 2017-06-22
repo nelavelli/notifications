@@ -27,7 +27,7 @@ public class AlertsController {
 	@Autowired
 	NotificationService notificationService;
 
-	@GetMapping(path = "/notifications", produces = MediaType.TEXT_HTML_VALUE)
+	@GetMapping(path = "/", produces = MediaType.TEXT_HTML_VALUE)
 	Resource index() {
 		return new ClassPathResource("static/index.html");
 	}

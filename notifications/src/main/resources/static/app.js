@@ -14,7 +14,7 @@ function setConnected(connected) {
 
 function connect() {
 
-	var subScibedTo = new SockJS('/announcement/' + subscribeTo);
+	var subScibedTo = new SockJS('/notifications/announcement/' + subscribeTo);
 	stompClient1 = Stomp.over(subScibedTo);
 	stompClient1.connect({}, function(frame) {
 		setConnected(true);
@@ -24,7 +24,7 @@ function connect() {
 		});
 	});
 
-	var socket = new SockJS('/announcement/all');
+	var socket = new SockJS('/notifications/announcement/all');
 	stompClient = Stomp.over(socket);
 	stompClient.connect({}, function(frame) {
 		setConnected(true);
@@ -48,7 +48,7 @@ function disconnect() {
 }
 
 function sendName() {
-	stompClient.send("/announcement/" + $("#department").val(), {}, JSON.stringify({
+	stompClient.send("/notifications/announcement/" + $("#department").val(), {}, JSON.stringify({
 		'message' : $("#name").val()
 	}));
 }
